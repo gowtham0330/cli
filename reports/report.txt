@@ -1,0 +1,68 @@
+==============================================================================
+  CLI-DIAGNOSTICS REPORT  -  v1.0.0
+==============================================================================
+Generated At : 2026-10-09T14:43:24.616474+00:00
+Strict Mode  : DISABLED
+Exit Code    : 1
+Final Status : ATTENTION REQUIRED
+
+1. SYSTEM & RUNTIME ENVIRONMENT
+------------------------------------------------------------------------------
+[PASS]  Python Runtime : CPython 3.10.12 (/usr/bin/python3)
+[PASS]  Operating System: Linux 4.19.0-gvisor (x86_64)
+        Platform Details: Linux-4.19.0-gvisor-x86_64-with-glibc2.36
+[PASS]  Disk Capacity   : 192553.0 MB Free / 192871.6 MB Total (0.2% used, required: 1024.0 MB)
+        Storage Status  : Disk space adequate: 192553.0 MB free (99.8% available).
+
+2. DEVELOPER TOOLCHAIN DIAGNOSTICS
+------------------------------------------------------------------------------
+TOOL       STATUS     VERSION / DETAILS                        PATH
+------------------------------------------------------------------------------
+git        INSTALLED  git version 2.34.1                       /usr/bin/git
+pip        INSTALLED  pip 26.2.1 from /root/.local/lib/pytho   /usr/local/bin/pip
+pytest     MISSING    N/A                                      -
+node       INSTALLED  v22.23.2                                 /usr/local/bin/node
+npm        INSTALLED  10.9.8                                   /usr/local/bin/npm
+docker     MISSING    N/A                                      -
+
+3. ENVIRONMENT VARIABLES (REDACTED AUDIT)
+------------------------------------------------------------------------------
+  AUTHORIZED_SERVICE_ACCOUNT_EMAIL = ***REDACTED***
+  CONDA_DEFAULT_ENV    = <not set>
+  CONTROL_PLANE_API_DIR = ***REDACTED***
+  GEMINI_API_KEY       = ***REDACTED***
+  HOME                 = /root
+  LANG                 = en_US.UTF-8
+  LC_ALL               = en_US.UTF-8
+  LOGNAME              = <not set>
+  PATH                 = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  PYTHONPATH           = <not set>
+  SHELL                = <not set>
+  TEMP                 = <not set>
+  TERM                 = <not set>
+  TMP                  = <not set>
+  USER                 = <not set>
+  VIRTUAL_ENV          = <not set>
+
+4. DIAGNOSTIC EVENTS & SERVICE HEALTH
+------------------------------------------------------------------------------
+Target / Context    : RabTech Python Software Engineering Internship
+Total Events Loaded : 5
+Severity Breakdown  : INFO: 2  |  WARN: 1  |  ERROR: 2
+Failure Metrics     : HTTP 5xx: 2  |  Missing Latency: 1
+
+Service Health Breakdown:
+SERVICE          EVENTS   ERR    WARN   5XX    NO_LAT   AVG_LAT      HEALTH
+------------------------------------------------------------------------------
+billing-api      4        2      1      2      1        759.3 ms     UNHEALTHY
+    * 2 error event(s) recorded
+    * 2 HTTP 5xx server error(s) detected
+profile-api      1        0      0      0      0        205.0 ms     HEALTHY
+    * All operations within normal thresholds
+
+Service Evaluation : ATTENTION REQUIRED
+  -> Service degradation detected: 2 error(s) and 2 HTTP 5xx failures.
+
+==============================================================================
+  EXECUTION RESULT: DIAGNOSTIC FAILURE / ATTENTION REQUIRED (Exit Code 1)
+==============================================================================

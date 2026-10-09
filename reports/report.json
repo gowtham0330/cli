@@ -1,0 +1,154 @@
+{
+  "tool_name": "cli-diagnostics",
+  "tool_version": "1.0.0",
+  "timestamp": "2026-10-09T14:43:24.616474+00:00",
+  "strict_mode": false,
+  "exit_code": 1,
+  "overall_status": "attention required",
+  "system_diagnostics": {
+    "python": {
+      "version": "3.10.12",
+      "major": 3,
+      "minor": 10,
+      "micro": 12,
+      "implementation": "CPython",
+      "executable": "/usr/bin/python3",
+      "is_supported": true,
+      "status": "HEALTHY",
+      "message": "Python 3.10.12 satisfies runtime requirements."
+    },
+    "os": {
+      "system": "Linux",
+      "release": "4.19.0-gvisor",
+      "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+      "machine": "x86_64",
+      "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+      "status": "HEALTHY"
+    },
+    "disk": {
+      "total_mb": 192871.61,
+      "used_mb": 318.6,
+      "free_mb": 192553.0,
+      "used_percent": 0.17,
+      "min_required_mb": 1024.0,
+      "status": "HEALTHY",
+      "message": "Disk space adequate: 192553.0 MB free (99.8% available)."
+    },
+    "env_vars": {
+      "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "SHELL": "<not set>",
+      "USER": "<not set>",
+      "LOGNAME": "<not set>",
+      "HOME": "/root",
+      "LANG": "en_US.UTF-8",
+      "LC_ALL": "en_US.UTF-8",
+      "TERM": "<not set>",
+      "PYTHONPATH": "<not set>",
+      "VIRTUAL_ENV": "<not set>",
+      "CONDA_DEFAULT_ENV": "<not set>",
+      "TEMP": "<not set>",
+      "TMP": "<not set>",
+      "CONTROL_PLANE_API_DIR": "***REDACTED***",
+      "GEMINI_API_KEY": "***REDACTED***",
+      "AUTHORIZED_SERVICE_ACCOUNT_EMAIL": "***REDACTED***"
+    },
+    "developer_tools": {
+      "git": {
+        "tool": "git",
+        "installed": true,
+        "version": "git version 2.34.1",
+        "path": "/usr/bin/git",
+        "status": "HEALTHY",
+        "message": "Tool 'git' available at /usr/bin/git."
+      },
+      "pip": {
+        "tool": "pip",
+        "installed": true,
+        "version": "pip 26.2.1 from /root/.local/lib/python3.10/site-packages/pip (python 3.10)",
+        "path": "/usr/local/bin/pip",
+        "status": "HEALTHY",
+        "message": "Tool 'pip' available at /usr/local/bin/pip."
+      },
+      "pytest": {
+        "tool": "pytest",
+        "installed": false,
+        "version": null,
+        "path": null,
+        "status": "WARNING",
+        "message": "Tool 'pytest' was not found in PATH."
+      },
+      "node": {
+        "tool": "node",
+        "installed": true,
+        "version": "v22.23.2",
+        "path": "/usr/local/bin/node",
+        "status": "HEALTHY",
+        "message": "Tool 'node' available at /usr/local/bin/node."
+      },
+      "npm": {
+        "tool": "npm",
+        "installed": true,
+        "version": "10.9.8",
+        "path": "/usr/local/bin/npm",
+        "status": "HEALTHY",
+        "message": "Tool 'npm' available at /usr/local/bin/npm."
+      },
+      "docker": {
+        "tool": "docker",
+        "installed": false,
+        "version": null,
+        "path": null,
+        "status": "WARNING",
+        "message": "Tool 'docker' was not found in PATH."
+      }
+    },
+    "overall_status": "WARNING",
+    "warnings_count": 2,
+    "errors_count": 0
+  },
+  "event_analysis": {
+    "generated_for": "RabTech Python Software Engineering Internship",
+    "total_events": 5,
+    "info_count": 2,
+    "warn_count": 1,
+    "error_count": 2,
+    "http_5xx_count": 2,
+    "missing_latency_count": 1,
+    "services": {
+      "billing-api": {
+        "service_name": "billing-api",
+        "total_events": 4,
+        "info_count": 1,
+        "warn_count": 1,
+        "error_count": 2,
+        "http_5xx_count": 2,
+        "missing_latency_count": 1,
+        "avg_latency_ms": 759.33,
+        "health": "UNHEALTHY",
+        "reasons": [
+          "2 error event(s) recorded",
+          "2 HTTP 5xx server error(s) detected"
+        ]
+      },
+      "profile-api": {
+        "service_name": "profile-api",
+        "total_events": 1,
+        "info_count": 1,
+        "warn_count": 0,
+        "error_count": 0,
+        "http_5xx_count": 0,
+        "missing_latency_count": 0,
+        "avg_latency_ms": 205.0,
+        "health": "HEALTHY",
+        "reasons": [
+          "All operations within normal thresholds"
+        ]
+      }
+    },
+    "overall_status": "attention required",
+    "is_healthy": false,
+    "summary_messages": [
+      "Service degradation detected: 2 error(s) and 2 HTTP 5xx failures."
+    ]
+  }
+}

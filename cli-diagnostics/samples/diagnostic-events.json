@@ -1,0 +1,45 @@
+{
+  "generated_for": "RabTech Python Software Engineering Internship",
+  "events": [
+    {
+      "timestamp": "2026-08-01T09:00:00Z",
+      "service": "billing-api",
+      "severity": "INFO",
+      "latency_ms": 148,
+      "http_status": 200,
+      "message": "Payment method verification succeeded"
+    },
+    {
+      "timestamp": "2026-08-01T09:01:00Z",
+      "service": "billing-api",
+      "severity": "WARN",
+      "latency_ms": 920,
+      "http_status": 200,
+      "message": "Payment gateway response elevated latency"
+    },
+    {
+      "timestamp": "2026-08-01T09:02:00Z",
+      "service": "billing-api",
+      "severity": "ERROR",
+      "latency_ms": 1210,
+      "http_status": 503,
+      "message": "Gateway timeout communicating with upstream card processor"
+    },
+    {
+      "timestamp": "2026-08-01T09:03:00Z",
+      "service": "profile-api",
+      "severity": "INFO",
+      "latency_ms": 205,
+      "http_status": 200,
+      "message": "User profile lookup completed"
+    },
+    {
+      "timestamp": "2026-08-01T09:04:00Z",
+      "service": "billing-api",
+      "severity": "ERROR",
+      "latency_ms": null,
+      "http_status": 500,
+      "message": "Unhandled exception during ledger write"
+    }
+  ]
+}
